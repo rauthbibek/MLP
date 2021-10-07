@@ -1,0 +1,16 @@
+params:
+  INPUT_SHAPE: [28, 28]
+  batch_size: 32
+  N_CLASS: 10
+  EPOCHS: 20
+  LOSS_FUNCTION: sparse_categorical_crossentropy
+  OPTIMIZER: SGD
+  METRICS: ["accuracy"]
+  validation_datasize: 5000
+
+artifacts:
+  artifacts_dir: artifacts
+  model_dir: models
+  model_name: classifier.h5
+  plots_dir: plots
+  plot_name: Loss_vs_accuracy.png
