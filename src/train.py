@@ -30,8 +30,8 @@ def main(config_path):
     create_dirs([artifact_dir, model_dir_path])
 
     model_name = config["artifacts"]["model_name"]
-    model_path = os.path.join(model_dir_path, model_name)
-    save_model(model_clf, model_path)
+    #model_path = os.path.join(model_dir_path, model_name)
+    save_model(model_clf, model_name, model_dir_path)
 
     plot_dir = config["artifacts"]["plots_dir"]
     plot_dir_path = os.path.join(artifact_dir, plot_dir)
@@ -40,7 +40,7 @@ def main(config_path):
     plot_name = config["artifacts"]["plot_name"]
     plot_file_path = os.path.join(plot_dir_path, plot_name)
 
-    save_plot(history, plot_file_path)
+    save_plot(history, plot_name,plot_dir_path)
 
 
 if __name__ == "__main__":
